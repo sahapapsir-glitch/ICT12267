@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>68054002 Sahapap siripon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-shoe-prints"></i>
+            <a href="#home">Sahapap siripon</a>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#home" class="active">หน้าแรก</a></li>
+                <li><a href="#products">สินค้า</a></li>
+                <li><a href="#about">เกี่ยวกับเรา</a></li>
+                <li><a href="#contact">ติดต่อ</a></li>
+            </ul>
+        </div>
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-actions">
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <button class="btn-signin">เข้าสู่ระบบ</button>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>รองเท้าสไตล์ที่ใช่<br><span>สำหรับคุณ</span></h1>
+            <p>ค้นพบคอลเลคชั่นรองเท้าระดับพรีเมียม ทั้งรองเท้ากีฬา รองเท้าลำลอง และรองเท้าแฟชั่น</p>
+            <a href="#products" class="btn-primary">เลือกซื้อเลย</a>
+        </div>
+        <div class="hero-image">
+            <div class="shoe-showcase">
+                <div class="shoe-card floating">
+                    <span class="badge">ใหม่</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <h2>หมวดหมู่สินค้า</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <i class="fas fa-running"></i>
+                <span>รองเท้ากีฬา</span>
+            </div>
+            <div class="category-card">
+                <i class="fas fa-hiking"></i>
+                <span>รองเท้าเดินป่า</span>
+            </div>
+            <div class="category-card">
+                <i class="fas fa-user-tie"></i>
+                <span>รองเท้าทางการ</span>
+            </div>
+            <div class="category-card">
+                <i class="fas fa-couch"></i>
+                <span>รองเท้าลำลอง</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <h2>สินค้ายอดนิยม</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="placeholder-shoe shoe-red"></div>
+                    <span class="discount">-20%</span>
+                </div>
+                <div class="product-info">
+                    <h3>Nike Air Max</h3>
+                    <p class="description">รองเท้าวิ่งระดับพรีเมียม</p>
+                    <div class="product-footer">
+                        <div class="price">
+                            <span class="old-price">฿4,500</span>
+                            <span class="new-price">฿3,600</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(event, 'Nike Air Max', 3600)" title="เพิ่มลงตะกร้า">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="placeholder-shoe shoe-teal"></div>
+                    <span class="badge-hot">ขายดี</span>
+                </div>
+                <div class="product-info">
+                    <h3>Adidas Ultraboost</h3>
+                    <p class="description">ความสบายระดับสูง</p>
+                    <div class="product-footer">
+                        <div class="price">
+                            <span class="new-price">฿5,200</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(event, 'Adidas Ultraboost', 5200)" title="เพิ่มลงตะกร้า">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="placeholder-shoe shoe-purple"></div>
+                </div>
+                <div class="product-info">
+                    <h3>Puma RS-X</h3>
+                    <p class="description">สไตล์สตรีทแวร์</p>
+                    <div class="product-footer">
+                        <div class="price">
+                            <span class="new-price">฿3,800</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(event, 'Puma RS-X', 3800)" title="เพิ่มลงตะกร้า">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="placeholder-shoe shoe-pink"></div>
+                    <span class="discount">-15%</span>
+                </div>
+                <div class="product-info">
+                    <h3>New Balance 574</h3>
+                    <p class="description">คลาสสิกไม่มีวันตาย</p>
+                    <div class="product-footer">
+                        <div class="price">
+                            <span class="old-price">฿3,200</span>
+                            <span class="new-price">฿2,720</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(event, 'New Balance 574', 2720)" title="เพิ่มลงตะกร้า">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="placeholder-shoe shoe-blue"></div>
+                </div>
+                <div class="product-info">
+                    <h3>Nike Zoom Fly</h3>
+                    <p class="description">สำหรับนักวิ่งมืออาชีพ</p>
+                    <div class="product-footer">
+                        <div class="price">
+                            <span class="new-price">฿4,800</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(event, 'Nike Zoom Fly', 4800)" title="เพิ่มลงตะกร้า">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="placeholder-shoe shoe-green"></div>
+                    <span class="badge-new">ใหม่</span>
+                </div>
+                <div class="product-info">
+                    <h3>Adidas NMD</h3>
+                    <p class="description">ดีไซน์ทันสมัย</p>
+                    <div class="product-footer">
+                        <div class="price">
+                            <span class="new-price">฿4,200</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(event, 'Adidas NMD', 4200)" title="เพิ่มลงตะกร้า">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>ทำไมต้องเลือกเรา?</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>จัดส่งฟรี</h3>
+                    <p>ส่งฟรีทั่วประเทศเมื่อซื้อครบ ฿2,000</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>ของแท้ 100%</h3>
+                    <p>รับประกันความแท้จากแบรนด์</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-undo"></i>
+                    <h3>เปลี่ยนคืนได้</h3>
+                    <p>เปลี่ยนหรือคืนสินค้าได้ภายใน 30 วัน</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-headset"></i>
+                    <h3>บริการ 24/7</h3>
+                    <p>พร้อมให้คำปรึกษาตลอดเวลา</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>ติดต่อเรา</h2>
+        <div class="contact-content">
+            <div class="social-links">
+                <a href="#" class="social-item" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="#" class="social-item" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="#" class="social-item" title="Gmail">
+                    <i class="fab fa-google"></i>
+                    <span>Gmail</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-shoe-prints"></i>
+                <span>Sahapap siripon</span>
+            </div>
+            <p>&copy; 2026 Sahapap siripon. สงวนลิขสิทธิ์ทุกประการ</p>
+        </div>
+    </footer>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> ตะกร้าสินค้า</h3>
+            <button class="close-cart" onclick="closeCart()" title="ปิดตะกร้า">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <p class="empty-cart">ตะกร้าว่างเปล่า</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>รวม:</span>
+                <span id="cart-total-price">฿0</span>
+            </div>
+            <button class="btn-checkout">ชำระเงิน</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay" onclick="closeCart()"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
